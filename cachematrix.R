@@ -2,22 +2,22 @@
 ## value.
 
 ## makeCacheMatrix is setting up the functions that will be used in the 
-##cachesolve fucntion.
+##cachesolve fucntion. 
 
 makeCacheMatrix <- function(x = matrix()) {
-                m <- NULL
-                set <- function(y) {
-                        x <<- y
-                        m <<- NULL
-                }
-                get <- function() x
-                setsolve <- function(solve) m <<- solve
-                getsolve <- function() m
-## defines the operations that will take place in cachesolve
-                list(set = set, get = get,
-                     setsolve = setsolve,
-                     getsolve = getsolve)
-## list allows us to hold the collection of values for set, get, setsolve, getsolve
+        m <- NULL
+        set <- function(y) {
+                x <<- y
+                m <<- NULL
+        }
+        get <- function() x
+        setsolve <- function(solve) m <<- solve
+        getsolve <- function() m
+        ## defines the operations that will take place in cachesolve
+        list(set = set, get = get,
+             setsolve = setsolve,
+             getsolve = getsolve)
+        ## list allows us to hold the collection of values for set, get, setsolve, getsolve
 }
 
 ## The cacheSolve function inverts the matrix and returns the cache.
